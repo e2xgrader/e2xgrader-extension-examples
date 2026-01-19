@@ -2,7 +2,7 @@
 import { NotebookPanel } from '@jupyterlab/notebook';
 import { Toolbar, ToolbarButton } from '@jupyterlab/ui-components';
 import { CommandRegistry } from '@lumino/commands';
-import { Widget, PanelLayout } from '@lumino/widgets';
+import { Widget } from '@lumino/widgets';
 
 /**
  * Custom Toolbar Widget
@@ -19,14 +19,14 @@ export class CustomToolbar extends Widget {
     const toolbar: Toolbar = panel.toolbar;
 
     // Entferne alle existierenden Items
-    const layout = toolbar.layout as PanelLayout;
+    /*const layout = toolbar.layout as PanelLayout;
     if (layout) {
       // Erstelle eine Kopie der Widgets, da wir während der Iteration entfernen
       const widgets = Array.from(layout.widgets);
       widgets.forEach(widget => {
         layout.removeWidget(widget);
       });
-    }
+    }*/
 
     // Füge eigene Buttons hinzu
     this._addCustomButtons(toolbar, commands, panel);

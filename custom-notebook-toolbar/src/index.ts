@@ -4,6 +4,7 @@ import {
 } from '@jupyterlab/application';
 
 import { INotebookTracker, NotebookPanel } from '@jupyterlab/notebook';
+import {PanelLayout} from "@lumino/widgets";
 import {CustomToolbar} from "./CustomToolbar";
 
 
@@ -24,10 +25,13 @@ const plugin: JupyterFrontEndPlugin<void> = {
     tracker.widgetAdded.connect((sender, panel: NotebookPanel) => {
       console.log('Neues Notebook erkannt, Custom Toolbar wird erstellt...');
 
-      // Warte bis das Notebook vollständig geladen ist
-      panel.revealed.then(() => {
-        new CustomToolbar(panel, app.commands);
+      const layout: PanelLayout = panel.toolbar.layout as PanelLayout;
+
+      [...layout.widgets].forEach(widget => {
+        layout.removeWidget(widget)
       });
+
+      new CustomToolbar(panel, app.commands);
     });
   }
 };
