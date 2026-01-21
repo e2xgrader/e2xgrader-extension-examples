@@ -1,0 +1,16 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.5.1
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: luca.ringhausen@h-brs.de
+author_name: Luca Ringhausen
+has_ai_rules: false
+has_binder: false
+has_settings: false
+kind: frontend
+labextension_name: '@e2xgrader-extension/replace-notebook-widget-factory'
+project_short_description: A JupyterLab that replaces the native notebook-widget-factory
+    extension to achieve an empty notebook toolbar.
+python_name: e2xgrader_extension_replace_notebook_widget_factory
+repository: https://github.com/e2xgrader/e2xgrader-extension-examples
+test: true
+

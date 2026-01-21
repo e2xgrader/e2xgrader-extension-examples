@@ -1,0 +1,5 @@
+{
+  "packageManager": "python",
+  "packageName": "e2xgrader_extension_replace_notebook_widget_factory",
+  "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package e2xgrader_extension_replace_notebook_widget_factory"
+}
